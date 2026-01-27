@@ -8,8 +8,8 @@ pio.renderers.default = "browser"
 # =========================================================
 # 1. 读取数据
 # =========================================================
-tvl_path = "ethereum_tvl_2023-01-01_2026-01-01.csv"
-price_path = "kline_ETHUSDT_D_20230101_20260101_spot.csv"
+tvl_path = "ethereum_tvl_2025-01-01_2026-01-01.csv"
+price_path = "kline_ETHUSDT_D_20250101_20260101.csv"
 
 tvl_df = pd.read_csv(tvl_path)
 price_df = pd.read_csv(price_path)
@@ -50,7 +50,7 @@ df['divergence_z'] = (
 # =========================================================
 # 5. ⭐ 信号生成（基于 Z-score）
 # =========================================================
-z_threshold = 1.2  # ⭐ 推荐从 1.2 开始
+z_threshold = 1.0  # ⭐ 推荐从 1.2 开始
 
 df['signal'] = 0
 
